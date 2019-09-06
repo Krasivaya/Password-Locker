@@ -97,7 +97,19 @@ def passwordLocker():
     if short_code == "ca":
         print("Sign Up")
         print('*' * 50)
-        username = input("User_name: ")
+        username = input("Username: ")
+        while True:
+            print(" CP - Create your own Password:\n AP - Auto Password")
+            password_Choice = input().lower().strip()
+            if password_Choice == 'cp':
+                password = input("Enter Password\n")
+                break
+            elif password_Choice == 'ap':
+                password = generate_Password()
+                break
+            else:
+                print("Invalid Password! Please try again")
+
     elif short_code == "si":
         pass
     else:
