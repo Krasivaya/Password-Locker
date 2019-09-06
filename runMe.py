@@ -108,7 +108,11 @@ def passwordLocker():
                 password = generate_Password()
                 break
             else:
-                print("Invalid Password! Please try again")
+                print("Invalid Password!\n Please try again")
+        save_user(create_user(username,password))
+        print("*"*85)
+        print(f"Hello {username},\n Your account has been created succesfully!\n Your password is: {password}")
+        print("*"*85)
 
     elif short_code == "si":
         pass
