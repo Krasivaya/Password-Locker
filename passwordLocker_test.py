@@ -1,5 +1,6 @@
 import unittest # Importing unittest module
 from passwordLocker import User # Importing user class from passwordLocker module
+from passwordLocker import Credentials #Importing credentials class from passwordLocker module
 
 class TestUser(unittest.TestCase):
     '''
@@ -27,6 +28,12 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
     #The end!
+#The End with TestUser class
+
+class TestCredentials(unittest.TestCase):
+    '''
+    TestCredentials class to define test cases for the credentials class behaviours
+    '''
 
 if __name__ == '__main__':
     unittest.main()
