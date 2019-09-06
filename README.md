@@ -6,7 +6,7 @@
 ### Description
 This is a python application that manages a user various account credentials for different acounts they have signed into or want to signed up to i.e username and passowrd for each account. (It can be email, social media, entertainment or job portal accounts)
 
-### Technologies Used
+### Technologies/Tools Used
 
 1. Python3.6
 2. Python3-pip
