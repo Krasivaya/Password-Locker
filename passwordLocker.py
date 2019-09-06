@@ -105,6 +105,16 @@ class Credentials:
         return ''.join(random.choice(password) for i in range(stringLength))
     #The end!
 
+    @classmethod
+    def copy_credentials(cls,platform):
+        '''
+        copy_credentials class to be able to copy credentials to the clipboard
+        '''
+        found_credentials = Credentials.find_credentials('Gmail')
+        pyperclip.copy(found_credentials.platform)
+    #The end!
+
+
     
 
 
