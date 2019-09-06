@@ -1,5 +1,5 @@
-import string # Importing string module
-import random # Importing random module
+import string # Importing string
+import random # Importing random
 class User:
     '''
     User class that generate new object of users
@@ -96,5 +96,11 @@ class Credentials:
         return cls.credentials_list
     #The end!
 
+    def new_password(stringLength = 10):
+        '''
+        new_password method to generate a new password
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
+        return ''.join(random.choice(password) for i in range(stringLength))
 
 
