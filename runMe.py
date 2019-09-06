@@ -66,3 +66,11 @@ def find_credential(platform):
     """
     return Credentials.find_credentials(platform)
 #The end!
+
+def check_credentials(platform):
+    """
+    check_credentials method to check if credentials already existed inside that platform and return true or false
+
+    """
+    return Credentials.credential_exists(platform)
+#The end!
