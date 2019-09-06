@@ -109,7 +109,15 @@ class TestCredentials(unittest.TestCase):
         test_credential.save_credentials()
 
         found_credential_exists = Credentials.credential_exists('Gmail')
-        self.asserTrue(found_credential_exists)
+        self.assertTrue(found_credential_exists)
+    #The end!
+
+    def test_display_all_credentials(self):
+        '''
+        test_display_all_credentials test case to test if all credentials can be displayed
+        '''
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+    #The end!
 
 
 if __name__ == '__main__':
