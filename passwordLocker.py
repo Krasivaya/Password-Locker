@@ -65,4 +65,15 @@ class Credentials:
         Credentials.credentials_list.remove(self)
     #The end!
 
+    @classmethod
+    def find_credentials(cls, platform):
+        '''
+        find_credentials class to find credentials and display their information
+        '''
+        for crede in cls.credentials_list:
+            if crede.platform == platform:
+                return crede
+    #The end!
+
+
 
