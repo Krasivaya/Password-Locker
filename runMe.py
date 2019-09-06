@@ -124,6 +124,78 @@ def passwordLocker():
         if signin_user == signin:
             print(f" Hello {username}.Welcome To Password Locker")  
             print('\n')
+    
+    while True:
+        print(" Use these short codes:\n CC - Create a new Credential \n DC - Display Credentials \n FC - Find a Credential \n GP - Auto Password \n D - Delete credential \n EA - Exit the Application \n")
+        short_code = input().lower().strip()
+        if short_code == "cc":
+            print(" Create New Credential")
+            print(" ."*20)
+            print(" Platform name ....")
+            platform = input().lower()
+            print(" Your Platform email")
+            email = input()
+            while True:
+                print(" EP - Enter your password:\n AP - Auto Password")
+                password_Choice = input().lower().strip()
+                if password_Choice == 'tp':
+                    password = input(" Enter Your Own Password\n")
+                    break
+                elif password_Choice == 'gp':
+                    password = new_Password()
+                    break
+                else:
+                    print(" Invalid Password!\n Please try again")
+            save_credentials(create_credential(platform,email,password))
+            print('\n')
+            print(f" Platform Credential for: {account} - Email: {email} - Password:{password} created succesfully")
+            print('\n')
+        elif short_code == "dc":
+            if display_credentials():
+                print(" Here is the list of credentials you have: ")
+                 
+                print(' *' * 30)
+                print(' _'* 30)
+                for platform in display_credentials():
+                    print(f" Platform:{platform.platform} \n Email:{email}\n Password:{password}")
+                    print(' _'* 30)
+                print(' *' * 30)
+            else:
+                print(" You don't have any credentials saved yet..........")
+        elif short_code == "fc":
+            print(" Enter the Platform Name you want to search for")
+            search_name = input().lower()
+            if find_credential(search_name):
+                search_credential = find_credential(search_name)
+                print(f" Platform Name : {search_credential.platform}")
+                print(' -' * 50)
+                print(f" Email: {search_credential.email} Password :{search_credential.password}")
+                print(' -' * 50)
+            else:
+                print(" That Credential does not exist")
+                print('\n')
+        elif short_code == "d":
+            print(" Enter the platform name of the Credentials you want to delete")
+            search_name = input().lower()
+            if find_credential(search_name):
+                search_credential = find_credential(search_name)
+                print(" _"*50)
+                search_credential.delete_credentials()
+                print('\n')
+                print(f" Your stored credentials for : {search_credential.platform}\n Has successfully deleted!")
+                print('\n')
+            else:
+                print(" That Credential you want to delete does not exist in your list yet")
+
+        elif short_code == 'ap':
+
+            password = new_Password()
+            print(f" {password} Has been generated succesfull. You can proceed to use it to your account")
+        elif short_code == 'ea':
+            print(" Thanks for using Password Locker.. See you next time!")
+            break
+        else:
+            print(" Wrong entry... Entry a valid code")
     else:
         print(" Please enter a valid code to continue")
 
