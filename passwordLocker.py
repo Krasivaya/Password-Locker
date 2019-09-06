@@ -75,5 +75,15 @@ class Credentials:
                 return crede
     #The end!
 
+    @classmethod
+    def credential_exists(cls, platform):
+        '''
+        credential_exists class to check if credentials already exists
+        '''
+        for crede in cls.credentials_list:
+            if crede.platform == platform:
+                return True
+        return False
+
 
 
