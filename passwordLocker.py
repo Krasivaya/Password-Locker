@@ -84,6 +84,15 @@ class Credentials:
             if crede.platform == platform:
                 return True
         return False
+    #The end!
+
+    @classmethod
+    def display_credentials(cls):
+        '''
+        display_credentials class to display credentials from credentials_list
+        '''
+        return cls.credentials_list
+    #The end!
 
 
 
