@@ -120,6 +120,10 @@ def passwordLocker():
         print(' *' * 50)
         username = input(" Username: ")
         password = input(" Password: ")
+        signin = signin_user(username,password)
+        if signin_user == signin:
+            print(f" Hello {username}.Welcome To Password Locker")  
+            print('\n')
     else:
         print(" Please enter a valid code to continue")
 
