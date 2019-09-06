@@ -74,3 +74,12 @@ def check_credentials(platform):
     """
     return Credentials.credential_exists(platform)
 #The end!
+
+def new_Password():
+    '''
+    new_password method to generate a new password
+    '''
+    auto_password = Credentials.new_password()
+    return auto_password
+#The end!
+
