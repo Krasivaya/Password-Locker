@@ -18,4 +18,10 @@ class User:
         '''
         User.user_list.append(self)
     #The end!
+    @classmethod
+    def display_user(cls):
+        '''
+        display_user method to display user_list
+        '''
+        return cls.user_list
 
