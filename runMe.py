@@ -22,3 +22,11 @@ def display_user():
     """
     return User.display_user()
 #The end!
+def signin_user(username,password):
+    """
+    signin_user method to check a user and then sign in they exist
+    """
+  
+    check_user = Credentials.user_check_me(username,password)
+    return check_user
+#The End!
