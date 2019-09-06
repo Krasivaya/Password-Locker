@@ -51,3 +51,11 @@ def display_credentials():
     """
     return Credentials.display_credentials()
 #The end!
+
+def delete_credential(credentials):
+    """
+    delete_credential method to delete a credential from credentials list
+
+    """
+    credentials.delete_credentials()
+#The end!
