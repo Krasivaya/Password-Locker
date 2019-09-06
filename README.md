@@ -6,6 +6,12 @@
 ### Description
 This is a python application that manages a user various account credentials for different acounts they have signed into or want to signed up to i.e username and passowrd for each account. (It can be email, social media, entertainment or job portal accounts)
 
+
+```
+                                      Password Locker Screenshot
+```
+![screenshot](https://user-images.githubusercontent.com/51264308/64457635-6d3f3500-d0f3-11e9-8fe3-94b69bd2d113.png)
+
 ### Technologies/Tools Used
 
 1. Python3.6
@@ -40,9 +46,6 @@ No bug known. If you found any please contact!
 ### Contact
 If you need any support, reach out to me at [semwagacarine@gmail.com]
 
-
-### Live site
-[Password-Locker](https://Krasivaya.github.io/Password-Locker/)
 
 ### License
 This project is under the [MIT](https://github.com/Krasivaya/github/blob/master/LICENSE) license.
