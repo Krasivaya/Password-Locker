@@ -116,10 +116,10 @@ def passwordLocker():
 
     elif short_code == "si":
         print(" *"*50)
-        print(" Enter your User name and your Password to log in:")
+        print(" Enter your Username and your Password to sign in:")
         print(' *' * 50)
-        username = input(" User name: ")
-        password = input(" password: ")
+        username = input(" Username: ")
+        password = input(" Password: ")
     else:
         print(" Please enter a valid code to continue")
 
