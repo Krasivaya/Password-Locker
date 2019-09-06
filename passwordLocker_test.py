@@ -12,3 +12,11 @@ class TestUser(unittest.TestCase):
         self.new_user = User('Carine','hideme') # Create user object
     #The end!
     
+    def test_init(self):
+        '''
+        test_init to test if the object is initialized properly
+        '''
+        self.assertEqual(self.new_user.username,'Carine')
+        self.assertEqual(self.new_user.password,'hideme')
+    #The End!
+    
