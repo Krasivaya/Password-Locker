@@ -100,5 +100,17 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(found_credentials.platform,test_credential.platform)
     #The end!
 
+    def test_credential_exists(self):
+        '''
+        test_credential_exists test case to test if credentials exists to get True and false otherwise
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential.save_credentials()
+
+        found_credential_exists = Credentials.credential_exists('Gmail')
+        self.asserTrue(found_credential_exists)
+
+
 if __name__ == '__main__':
     unittest.main()
