@@ -1,5 +1,6 @@
 import string # Importing string
 import random # Importing random
+import pyperclip # Importing pyperclip
 class User:
     '''
     User class that generate new object of users
@@ -102,5 +103,9 @@ class Credentials:
         '''
         password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
         return ''.join(random.choice(password) for i in range(stringLength))
+    #The end!
+
+    
+
 
 
