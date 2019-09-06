@@ -26,7 +26,14 @@ def signin_user(username,password):
     """
     signin_user method to check a user and then sign in they exist
     """
-  
     check_user = Credentials.user_check_me(username,password)
     return check_user
 #The End!
+
+def create_credential(platform,email,password):
+    """
+    create_credential method to create new credentials
+    """
+    new_credential = Credentials(platform,email,password)
+    return new_credential
+#The end!
