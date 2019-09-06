@@ -1,6 +1,6 @@
 class User:
     '''
-    User class that generate new instances of users
+    User class that generate new object of users
     '''
     user_list = []
     # Empty object to hold user list
@@ -34,5 +34,10 @@ class User:
         '''
         User.user_list.remove(self)
     #The End!
-
+#The End of User Class!
+class Credentials:
+    '''
+    Credentials class to create new objects of Credentials
+    '''
+    pass
 
