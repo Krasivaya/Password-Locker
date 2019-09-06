@@ -3,7 +3,7 @@ class User:
     User class that generate new object of users
     '''
     user_list = []
-    # Empty object to hold user list
+    # Empty object to hold new user
 
     def __init__(self,username,password):
         '''
@@ -39,5 +39,13 @@ class Credentials:
     '''
     Credentials class to create new objects of Credentials
     '''
-    pass
+
+    def __init__(self,platform,email,password):
+        '''
+        __init__ Method to define credentials properties
+        '''
+        self.platform = platform
+        self.email = email
+        self.password = password
+    #The End!
 
