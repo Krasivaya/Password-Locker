@@ -91,33 +91,37 @@ def copy_credentials(platform):
 #The end!
 
 def passwordLocker():
-    print("Welcome to Password Locker...\n Please enter one of the following code to proceed.\n CA ---  Create New Account  \n SI ---  Sign In Your Account  \n")
+    print(" Welcome to Password Locker...\n Please enter one of the following code to proceed.\n CA ---  Create New Account  \n SI ---  Sign In Your Account  \n")
     
     short_code = input("").lower().strip() 
     if short_code == "ca":
-        print("Sign Up")
-        print('*' * 50)
-        username = input("Username: ")
+        print(" Sign Up")
+        print(' *' * 50)
+        username = input(" Username: ")
         while True:
             print(" CP - Create your own Password:\n AP - Auto Password")
             password_Choice = input().lower().strip()
             if password_Choice == 'cp':
-                password = input("Enter Password\n")
+                password = input(" Enter Password\n")
                 break
             elif password_Choice == 'ap':
-                password = generate_Password()
+                password = new_Password()
                 break
             else:
-                print("Invalid Password!\n Please try again")
+                print(" Invalid Password!\n Please try again")
         save_user(create_user(username,password))
-        print("*"*85)
+        print(" *"*70)
         print(f"Hello {username},\n Your account has been created succesfully!\n Your password is: {password}")
-        print("*"*85)
+        print(" *"*70)
 
     elif short_code == "si":
-        pass
+        print(" *"*50)
+        print(" Enter your User name and your Password to log in:")
+        print(' *' * 50)
+        username = input(" User name: ")
+        password = input(" password: ")
     else:
-        print("Please enter a valid code to continue")
+        print(" Please enter a valid code to continue")
 
 
 if __name__ == '__main__':
