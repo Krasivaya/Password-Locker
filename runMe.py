@@ -59,3 +59,10 @@ def delete_credential(credentials):
     """
     credentials.delete_credentials()
 #The end!
+
+def find_credential(platform):
+    """
+    find_credential method to find credentials by the platform name and return the credentials that belong to that platform
+    """
+    return Credentials.find_credentials(platform)
+#The end!
