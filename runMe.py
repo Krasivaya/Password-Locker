@@ -93,6 +93,9 @@ def copy_credentials(platform):
 def passwordLocker():
     print("Welcome to Password Locker...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n SI ---  Sign In Your Account  \n")
     
+    short_code = input("").lower().strip()
+
+    
 
 if __name__ == '__main__':
     passwordLocker()
