@@ -57,5 +57,12 @@ class Credentials:
         '''
         Credentials.credentials_list.append(self)
     #The end!
+    
+    def delete_credentials(self):
+        '''
+        delete_credentials class to remove credential ffrom credentials_list
+        '''
+        Credentials.credentials_list.remove(self)
+    #The end!
 
 
