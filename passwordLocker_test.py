@@ -70,7 +70,7 @@ class TestCredentials(unittest.TestCase):
         test_save_many_credentials test case to test if we can save multiple credentials at a time
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials('Email','semwagacarine@gmail.com','hideme')
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
         test_credential.save_credentials()
 
         self.assertEqual(len(Credentials.credentials_list),2)
@@ -81,11 +81,23 @@ class TestCredentials(unittest.TestCase):
         test_delete_credentials test case to test if we can remove a credential
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials('Email','semwagacarine@gmail.com','hideme')
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
         test_credential.save_credentials()
         
         self.new_credential.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
+    #The end!
+
+    def test_find_credentials(self):
+        '''
+        test_find_credentials test case to test if we can find credentials and display the information
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials('Gmail','test.user@gmail.com','seekme')
+        test_credential.save_credentials()
+
+        found_credentials = Credentials.find_credentials('Gmail')
+        self.assertEqual(found_credentials.platform,test_credential.platform)
     #The end!
 
 if __name__ == '__main__':
