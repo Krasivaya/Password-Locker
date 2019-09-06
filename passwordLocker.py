@@ -37,6 +37,17 @@ class User:
         '''
         User.user_list.remove(self)
     #The End!
+
+    def user_check_me(username, password):
+        """
+        user_check_me method to check if a certain user is in user_list or not
+        """
+        check_me = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                    check_me == user.username
+        return check_me
+    #The End!
 #The End of User Class!
 class Credentials:
     '''
@@ -113,6 +124,8 @@ class Credentials:
         found_credentials = Credentials.find_credentials('Gmail')
         pyperclip.copy(found_credentials.platform)
     #The end!
+#The End of Credentials class
+
 
 
     
