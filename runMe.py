@@ -37,3 +37,10 @@ def create_credential(platform,email,password):
     new_credential = Credentials(platform,email,password)
     return new_credential
 #The end!
+
+def save_credentials(credentials):
+    """
+    save_credentials method to save credentials in credentials_list
+    """
+    credentials. save_credentials()
+#The end!
