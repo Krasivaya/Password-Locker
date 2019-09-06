@@ -44,3 +44,10 @@ def save_credentials(credentials):
     """
     credentials. save_credentials()
 #The end!
+
+def display_credentials():
+    """
+    display_credentials method to display user's credentials.
+    """
+    return Credentials.display_credentials()
+#The end!
