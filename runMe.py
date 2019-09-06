@@ -83,3 +83,10 @@ def new_Password():
     return auto_password
 #The end!
 
+def copy_credentials(platform):
+    """
+    copy_credentials class to be able to copy credentials to the clipboard
+    """
+    return Credentials.copy_password(platform)
+#The end!
+
