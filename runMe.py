@@ -91,15 +91,17 @@ def copy_credentials(platform):
 #The end!
 
 def passwordLocker():
-    print("Welcome to Password Locker...\n Please enter one of the following to proceed.\n CA ---  Create New Account  \n SI ---  Sign In Your Account  \n")
+    print("Welcome to Password Locker...\n Please enter one of the following code to proceed.\n CA ---  Create New Account  \n SI ---  Sign In Your Account  \n")
     
     short_code = input("").lower().strip() 
     if short_code == "ca":
-        pass
+        print("Sign Up")
+        print('*' * 50)
+        username = input("User_name: ")
     elif short_code == "si":
         pass
     else:
-        print("Please enter a valid input to continue")
+        print("Please enter a valid code to continue")
 
 
 if __name__ == '__main__':
