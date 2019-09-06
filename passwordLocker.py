@@ -39,6 +39,8 @@ class Credentials:
     '''
     Credentials class to create new objects of Credentials
     '''
+    credentials_list = []
+    # Empty object to hold new credentials
 
     def __init__(self,platform,email,password):
         '''
@@ -48,4 +50,12 @@ class Credentials:
         self.email = email
         self.password = password
     #The End!
+
+    def save_credentials(self):
+        '''
+        save_credentials class to save and store new credentials into credentials_list
+        '''
+        Credentials.credentials_list.append(self)
+    #The end!
+
 
