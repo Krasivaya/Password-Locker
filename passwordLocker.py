@@ -1,3 +1,5 @@
+import string # Importing string module
+import random # Importing random module
 class User:
     '''
     User class that generate new object of users
