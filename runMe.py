@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-from passwordLocker import User, Credentials #Importing user and credentials classes
+from passwordLocker import User, Credentials # Importing user and credentials classes
 
 def create_user(username,password):
     '''
@@ -87,6 +87,6 @@ def copy_credentials(platform):
     """
     copy_credentials class to be able to copy credentials to the clipboard
     """
-    return Credentials.copy_password(platform)
+    return Credentials.copy_credentials(platform)
 #The end!
 
