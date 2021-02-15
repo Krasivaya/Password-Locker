@@ -4,7 +4,7 @@
 [Carine I. SEMWAGA](https://github.com/Krasivaya)
 
 ### Description
-This is a python application that manages a user various account credentials for different acounts they have signed into or want to signed up to i.e username and passowrd for each account. (It can be email, social media, entertainment or job portal accounts)
+This is a python application that manages a user various account credentials for different accounts they have signed into or want to signed up to i.e username and password for each account. (It can be email, social media, entertainment or job portal accounts)
 
 
 ```
@@ -24,7 +24,7 @@ This is a python application that manages a user various account credentials for
 * Open your terminal
 * initialize github, git clone https://github.com/Krasivaya/Password-Locker.git
 * cd Password-Locker
-* open folder in prefered IDE
+* open folder in preferred IDE
 
 ## Running end-to-end tests
 
